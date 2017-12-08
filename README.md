@@ -7,3 +7,4 @@ Using this repo to synchronize my configurations across multiple devices.
 * KDE Plasma5 Desktop stuff? check how and if possible at all (file icons, widgets, ..)
 * KDE Connect scripts?
 * vscode snippets, hotkeys
+* dolphin
