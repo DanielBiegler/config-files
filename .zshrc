@@ -51,7 +51,19 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  archlinux
+  battery
+  colored-man-pages
+  pylint
+  python
+  pyenv
+  pip
+  npm
+  node 
+  common-aliases
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,4 +98,7 @@ setopt extendedglob
 alias setvol='pactl set-sink-volume 1'
 alias df='df -h'
 alias du='du -h'
+alias dus='du -h --summarize'
 alias gv='gwenview'
+# for quick video reencoding, usage: "reenc 33 example.mp4"
+reenc() { ffmpeg -i "$2" -crf "$1" "crf-$1_$2"; }
