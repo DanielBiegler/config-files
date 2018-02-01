@@ -100,5 +100,6 @@ alias df='df -h'
 alias du='du -h'
 alias dus='du -h --summarize'
 alias gv='gwenview'
+alias dict='sdcv'
 # for quick video reencoding, usage: "reenc 33 example.mp4"
 reenc() { ffmpeg -i "$2" -crf "$1" "crf-$1_$2"; }
