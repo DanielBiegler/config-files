@@ -103,3 +103,6 @@ alias gv='gwenview'
 alias dict='sdcv'
 # for quick video reencoding, usage: "reenc 33 example.mp4"
 reenc() { ffmpeg -i "$2" -crf "$1" "crf-$1_$2"; }
+# for laptop only
+# for playing audio via bluetooth, it only works when killing PA after enabling BT!
+alias laptop_btaudio='sudo systemctl start bluetooth && pulseaudio -k && pulseaudio --start'
