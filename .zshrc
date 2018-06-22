@@ -96,13 +96,15 @@ setopt extendedglob
 # PERSONAL ALIASES
 # volume control, usage: "setvol 25%" => sets the volume to 25/100
 alias setvol='pactl set-sink-volume 1'
-alias df='df -h'
-alias du='du -h'
+alias dfh='df -h'
+alias duh='du -h'
 alias dus='du -h --summarize'
 alias gv='gwenview'
 alias dict='sdcv'
 # for quick video reencoding, usage: "reenc 33 example.mp4"
 reenc() { ffmpeg -i "$2" -crf "$1" "crf-$1_$2"; }
+# after adding gitignore to already commited files
+alias apply-gitignore='git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached'
 # for laptop only
 # for playing audio via bluetooth, it only works when killing PA after enabling BT!
 alias laptop_btaudio='sudo systemctl start bluetooth && pulseaudio -k && pulseaudio --start'
